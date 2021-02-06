@@ -3,7 +3,7 @@ Example of max pairwise distance algorithm written in Java. The code is part of 
 
 ## Authors
 * [Favaro Simone](https://github.com/suerioh)
-* [Molon Alberto](https://github.com/MollyLand)
+* [Molon Alberto](https://github.com/albertomolon)
 
 ## Problem Statement
 Given a set _S_ of points from a metric space, the algorithm requires to determine the maximum distance between two points.

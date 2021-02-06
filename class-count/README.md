@@ -3,7 +3,7 @@ Example of class count algorithm using Spark. The code is part of some homeworks
 
 ## Authors
 * [Favaro Simone](https://github.com/suerioh)
-* [Molon Alberto](https://github.com/MollyLand)
+* [Molon Alberto](https://github.com/albertomolon)
 
 ## Description
 This algorithm implements different versions of the class count algorithm. It receives in input an integer _K_ and path to a text file containing a collection of pairs _(i,z<sub>i</sub>)_. The text file stores one pair per line which contains the key _i_ (a progressive integer index starting from 0) and the value _z<sub>i</sub>_ (a string) separated by single space, with no parentheses or comma.

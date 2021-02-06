@@ -15,7 +15,7 @@ List of algorithms analyzed during the 'Big Data Computing' course from the 'Mas
 
 ### Authors
 * [Favaro Simone](https://github.com/suerioh)
-* [Molon Alberto](https://github.com/MollyLand)
+* [Molon Alberto](https://github.com/albertomolon)
 
 ### Prerequisites
 You need Java Development Kit (JDK) version 8.

@@ -3,7 +3,7 @@ Example of diversity maximization algorithm using Spark. The code is part of som
 
 ## Authors
 * [Favaro Simone](https://github.com/suerioh)
-* [Molon Alberto](https://github.com/MollyLand)
+* [Molon Alberto](https://github.com/albertomolon)
 
 ## Problem Statement
 Given a set _P_ of _N_ points in a metric space and an integer _k < N_, diversity maximization (remote-clique variant) requires to find _k_ distinct points of _P_ so to maximize their average distance.
