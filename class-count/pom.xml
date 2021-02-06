@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>it.app</groupId>
+
+	<artifactId>class-count</artifactId>
+
+	<version>1.00</version>
+
+	<packaging>jar</packaging>
+
+	<!-- Project description elements -->
+	<name>class-count</name>
+
+	<description>Class count using Spark</description>
+
+	<inceptionYear>2020</inceptionYear>
+
+	<developers>
+        <developer>
+			<id>mollyLand</id>
+			<name>Alberto Molon</name>
+		</developer>
+	</developers>
+
+
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<!-- Build settings -->
+
+	<!-- Specifies the encoding to be used for project source files -->
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<!-- Configuration of the default build lifecycle -->
+	<build>
+		<defaultGoal>compile</defaultGoal>
+
+		<!-- source code folder -->
+		<sourceDirectory>${basedir}/src/main/java</sourceDirectory>
+
+		<!-- compiled code folder -->
+		<directory>${basedir}/target</directory>
+
+		<!-- name of the generated package -->
+		<finalName>${project.artifactId}-${project.version}</finalName>
+
+		<!-- configuration of the plugins for the different goals -->
+		<plugins>
+
+			<!-- compiler plugin: source and target code is for Java 1.8 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.0</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+			<!-- javadoc plugin: output in the javadoc folder -->
+			<plugin>
+    				<groupId>org.apache.maven.plugins</groupId>
+    				<artifactId>maven-javadoc-plugin</artifactId>
+    				<version>3.2.0</version>
+    				<configuration>
+						<reportOutputDirectory>${basedir}/javadoc</reportOutputDirectory>
+						<author>true</author>
+						<nosince>false</nosince>
+						<show>protected</show>
+					</configuration>
+			</plugin>
+
+			<!-- generates jar files including any dependencies -->
+			<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-assembly-plugin</artifactId>
+					<version>3.3.0</version>
+					<configuration>
+						<descriptorRefs>
+							<descriptorRef>jar-with-dependencies</descriptorRef>
+						</descriptorRefs>
+					</configuration>
+					<executions>
+						<execution>
+							<id>make-assembly</id> <!-- this is used for inheritance merges -->
+						<phase>package</phase> <!-- bind to the packaging phase -->
+						<goals>
+							<goal>single</goal> <!-- the only goal of the assembly plugin -->
+						</goals>
+						</execution>
+					</executions>
+			</plugin>
+
+		</plugins>
+
+		
+	</build>
+
+    <!-- Dependencies -->
+	<dependencies>
+
+        <!-- spark dependency -->
+		<dependency>
+    		<groupId>org.apache.spark</groupId>
+    		<artifactId>spark-core_2.12</artifactId>
+    		<version>3.0.0</version>
+		</dependency>
+
+	</dependencies>
+
+</project>
